@@ -58,4 +58,34 @@ There are two ways to run the solution and its unit tests:
     ```
     
 ### Run the solution using Docker
-⚠️  _Not yet implemented_
+1. Clone the repo by executing the following command in new a terminal opened after installing `RVM`:
+    ```bash
+    $ git clone https://github.com/elyalvarado/psl-sspe
+    ```
+
+2. Change the working directory to the repo:
+    ```bash
+    $ cd psl-sspe/
+    ```
+    
+3. Build the docker image:
+    ```bash
+    $ docker build -t psl-sspe .
+    ```
+    
+4. Run using the provided `sample.txt` file in the repo:
+    ```bash
+    $ docker run psl-sspe:latest
+    ```
+    
+5. Run the specs:
+    ```bash
+    $ docker run psl-sspe:latest rspec
+    ```
+    
+6. Run passing a local file to the container:
+    ```bash
+    $ docker run -v /path/to/file:/srv/app/file psl-sspe:latest
+    ```
+    
+    Where `/path/to/file` is the absolute path to the file to be parsed.
