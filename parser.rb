@@ -148,7 +148,7 @@ module SSPE
         digit = HASH_TO_DIGITS_MAP[digit_hash]
         raise SSPE::InputError, 'Unrecognized digit in input file.' unless digit
 
-        @digits << digit
+        @digits += digit
 
         break if matrix.first.empty?
         # We keep doing it until there are no more digits to read
