@@ -13,30 +13,48 @@ There are two ways to run the solution and its unit tests:
 
 1. Install Ruby Version Manager, follow the instructions [here](https://rvm.io/rvm/install).
 
-2. Clone the repo by executing the following command in a terminal:
+2. Clone the repo by executing the following command in new a terminal opened after installing `RVM`:
     ```bash
-    git clone https://github.com/elyalvarado/psl-sspe
+    $ git clone https://github.com/elyalvarado/psl-sspe
     ```
 
-3. Change the working directory to the repo:
+3. Change the working directory to the repo, and follow the instructions from RVM:
     ```bash
-    cd psl-sspe
+    $ cd psl-sspe/
+    Required ruby-2.5.1 is not installed.
+    To install do: 'rvm install "ruby-2.5.1"'
+    # ...
     ```
 
-4. Install the project dependencies:
+4. Change again into the working directory to force reloading the ruby version after install:
     ```bash
-    gem install bundler
-    bundle install
+    $ cd .
+    ruby-2.5.1 - #gemset created /usr/share/rvm/gems/ruby-2.5.1@psl-sspe
+    ruby-2.5.1 - #generating psl-sspe wrappers.........
+    Using /usr/share/rvm/gems/ruby-2.5.1 with gemset psl-sspe
     ```
 
-5. To run the  parser with the sample provided file:
+5. Install the project dependencies:
     ```bash
-    ruby parser.rb sample.txt
+    $ gem install bundler
+    # ...
+    $ bundle install
+    # ...
     ```
 
-6. To run the tests:
+6. To run the  parser with the sample provided file:
     ```bash
-    rspec
+    $ ruby parser.rb sample.txt
+    1234567890
+    ```
+
+7. To run the tests:
+    ```bash
+    $ rspec
+    ........
+    
+    Finished in 0.00484 seconds (files took 0.08087 seconds to load)
+    8 examples, 0 failures
     ```
     
 ### Run the solution using Docker
